@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>TheLog Server 정보</title>
+
+<style>
+    /* 🔥 전체 메뉴 공통 배경 구조 */
+  html {
+    background: linear-gradient(
+        180deg,
+        #2e2e2e 0%,
+        #1f1f1f 50%,
+        #151515 100%
+    );
+    background-attachment: fixed;
+}
+
+    body {
+        margin: 0;
+        background: transparent; /* body는 투명 처리 */
+        color: #ddd;
+        font-family: "Malgun Gothic", Arial, sans-serif;
+    }
+
+    /* 기존 body.loaded는 비워두기만 */
+    body.loaded {}
+
+    /* 전체 화면 어두운 오버레이 */
+    body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.15);
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    /* 상단 메뉴 */
+    .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(0,0,0,0.55);
+        padding: 14px 0;
+        border-bottom: 1px solid rgba(255,0,0,0.25);
+        z-index: 999;
+        text-align: center;
+        backdrop-filter: blur(3px);
+    }
+
+    .navbar a {
+        color: #ddd;
+        margin: 0 28px;
+        font-size: 19px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .navbar a:hover {
+        color: #ff3333;
+        border-bottom: 2px solid #ff3333;
+        text-shadow: 0 0 8px #ff0000;
+    }
+
+    /* 서버정보 배너 */
+    .header {
+        background-image: url('images/baphomet2.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 520px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .header::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,0.38);
+    }
+
+    .header::after {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 100%;
+        height: 350px;
+        background: linear-gradient(
+            to bottom,
+            rgba(0,0,0,0) 0%,
+            rgba(0,0,0,0.25) 30%,
+            rgba(0,0,0,0.55) 65%,
+            rgba(0,0,0,0.90) 100%
+        );
+    }
+
+    .header h1 {
+        position: relative;
+        font-size: 45px;
+        font-weight: bold;
+        letter-spacing: 4px;
+        color: #fff;
+        text-shadow: 0 0 10px #000, 0 0 20px #990000;
+        top: 60px;
+    }
+
+    /* 본문 박스 */
+    .container {
+        width: 860px;
+        margin: 120px auto 70px auto;
+        background: rgba(0,0,0,0.78);
+        padding: 45px 50px;
+        border: 1px solid rgba(255,0,0,0.35);
+        border-radius: 12px;
+        box-shadow: 0 0 20px rgba(255,0,0,0.25);
+        line-height: 1.7;
+        font-size: 18px;
+        position: relative;
+        z-index: 5;
+    }
+
+    h2 {
+        color: #ff4444;
+        margin-top: 40px;
+        margin-bottom: 16px;
+        font-size: 26px;
+        border-bottom: 1px solid rgba(255,0,0,0.35);
+        padding-bottom: 6px;
+    }
+
+    ul { padding-left: 22px; }
+    li { margin-bottom: 10px; }
+
+    p {
+        margin-bottom: 18px;
+        line-height: 1.75;
+    }
+
+    .footer {
+        margin-top: 60px;
+        padding: 15px 0;
+        font-size: 14px;
+        color: rgba(230, 230, 230, 0.75);
+        text-align: center;
+        line-height: 1.4;
+    }
+</style>
+</head>
+
+<body>
+
+<script>
+window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+});
+</script>
+
+<!-- 메뉴 -->
+<div class="navbar">
+    <a href="index.html">홈</a>
+    <a href="notice.html">공지사항</a>
+    <a href="info.html">서버정보</a>
+    <a href="update.html">업데이트</a>
+    <a href="boss.html">보스정보</a>
+    <a href="promo.html">홍보안내</a>
+    <a href="service.html">고객센터</a>
+    <a href="download.html">다운로드</a>
+</div>
+
+<!-- 헤더 -->
+<div class="header">
+    <h1>⚔ TheLog Server 정보</h1>
+</div>
+
+<!-- 본문 -->
+<div class="container">
+
+    <h2>안내사항</h2>
+    <p>
+        저희 서버는 <b>본섭 지향의 ‘하자 서버’</b>로 운영되며,<br>
+        초반 사냥 및 보스 공략에서 난이도와 불편함이 있을 수 있습니다.
+    </p>
+    <p>
+        이는 아이템 가치와 게임 내 경제의 안정성을 위해 선택한 방향이며,<br>
+        유저분들의 시간 투자가 헛되지 않도록 운영진도 최선을 다하고 있습니다.
+    </p>
+    <p>
+        서버 이용 전 <b>공지사항</b>을 꼭 확인해주시기 바랍니다.
+    </p>
+
+    <h2>기본 정보</h2>
+    <ul>
+        <li>1. 서버 방향 : 본섭 지향, 장기 운영을 목표</li>
+        <li>2. 서버 특징 : 사냥 및 보스 공략 중심</li>
+        <li>3. 최고 레벨 : 60 (추후 변동 가능)</li>
+    </ul>
+
+    <h2>서버 지원 기능</h2>
+    <ul>
+        <li>① 40레벨까지 [.버프] 무상 지원</li>
+        <li>② [.수배] PVP 추가 대미지 +2 / 대미지 감소 +1</li>
+        <li>③ 해외 유저 자동칼질 적용 (칼 끊김 문제 해결)</li>
+        <li>④ 엘릭서 최대 5개 섭취 가능</li>
+    </ul>
+
+    <h2>혈맹 & 필드 & 동맹</h2>
+    <ul>
+        <li>필드 및 분쟁은 운영자가 개입하지 않습니다. 유저들이 직접 환경을 만들어갑니다.</li>
+        <li>혈맹 가입 시 추가 경험치 보너스 적용</li>
+        <li>혈맹 인원 제한 : 최대 20명</li>
+    </ul>
+
+</div>
+
+<!-- footer -->
+<div class="footer">
+    서버의 모든 저작권은 NC소프트에 있으며, 리니지 개발과 발전, 커뮤니티를 위한 서버입니다.<br>
+    게임사의 요청 시 서버는 언제든지 중단될 수 있음을 알려드립니다.
+</div>
+
+</body>
+</html>

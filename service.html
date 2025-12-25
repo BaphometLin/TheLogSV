@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>고객센터 - TheLog Server</title>
+
+<style>
+    /* 🔥 전체 페이지 고정 배경 */
+  html {
+    background: linear-gradient(
+        180deg,
+        #2e2e2e 0%,
+        #1f1f1f 50%,
+        #151515 100%
+    );
+    background-attachment: fixed;
+}
+
+    body {
+        margin: 0;
+        background: transparent;
+        color: #ddd;
+        font-family: "Malgun Gothic", Arial, sans-serif;
+    }
+
+    /* 화면 전체 어두운 레이어 */
+    body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.15);
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    .footer {
+        margin-top: 60px;
+        padding: 15px 0;
+        font-size: 14px;
+        color: rgba(230, 230, 230, 0.75);
+        text-align: center;
+        line-height: 1.4;
+    }
+
+    /* 상단 메뉴 */
+    .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.55);
+        padding: 14px 0;
+        border-bottom: 1px solid rgba(255, 0, 0, 0.25);
+        z-index: 999;
+        text-align: center;
+        backdrop-filter: blur(4px);
+    }
+
+    .navbar a {
+        color: #ddd;
+        margin: 0 28px;
+        font-size: 19px;
+        font-weight: bold;
+        text-decoration: none;
+        transition: 0.25s;
+    }
+
+    .navbar a:hover {
+        color: #ff3333;
+        border-bottom: 2px solid #ff3333;
+        text-shadow: 0 0 8px #ff0000;
+    }
+
+    /* 배너 */
+    .header {
+        background-image: url('images/baphomet2.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 520px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    .header::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.15);
+    }
+    .header::after {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        width: 100%;
+        height: 350px;
+        background: linear-gradient(
+            to bottom,
+            rgba(0,0,0,0) 0%,
+            rgba(0,0,0,0.25) 30%,
+            rgba(0,0,0,0.55) 65%,
+            rgba(0,0,0,0.9) 100%
+        );
+    }
+    .header h1 {
+        position: relative;
+        font-size: 43px;
+        font-weight: bold;
+        letter-spacing: 4px;
+        color: #fff;
+        top: 60px;
+        text-shadow: 0 0 10px #000, 0 0 20px #990000;
+    }
+
+    /* 컨테이너 */
+    .container {
+        width: 860px;
+        margin: 120px auto 70px auto;
+        background: rgba(0,0,0,0.78);
+        padding: 45px 50px;
+        border: 1px solid rgba(255,0,0,0.35);
+        border-radius: 12px;
+        box-shadow: 0 0 20px rgba(255,0,0,0.25);
+        line-height: 1.65;
+        font-size: 18px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .service-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 35px 0;
+    }
+    .service-icon {
+        width: 120px;
+        flex-shrink: 0;
+    }
+    .service-text {
+        flex: 1;
+        margin-left: 25px;
+    }
+    .service-text-title {
+        font-size: 26px;
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+    .service-text-desc {
+        font-size: 16px;
+        color: #ccc;
+        line-height: 1.6;
+    }
+    .service-btn {
+        background: #6b5f53;
+        padding: 15px 40px;
+        color: #fff;
+        border-radius: 40px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        transition: 0.2s;
+        white-space: nowrap;
+    }
+    .service-btn:hover {
+        background: #8b7e71;
+    }
+    .service-line {
+        width: 100%;
+        height: 1px;
+        background: rgba(255,255,255,0.15);
+        margin: 20px 0;
+    }
+</style>
+</head>
+
+<body>
+
+<script>
+window.addEventListener("load", () => {
+    document.body.classList.add("loaded");
+});
+</script>
+
+<!-- 상단 메뉴 -->
+<div class="navbar">
+    <a href="index.html">홈</a>
+    <a href="notice.html">공지사항</a>
+    <a href="info.html">서버정보</a>
+    <a href="update.html">업데이트</a>
+    <a href="boss.html">보스정보</a>
+    <a href="promo.html">홍보안내</a>
+    <a href="service.html" style="color:#ff3333; border-bottom:2px solid #ff3333;">고객센터</a>
+    <a href="download.html">다운로드</a>
+</div>
+
+<!-- 배너 -->
+<div class="header">
+    <h1>고객센터</h1>
+</div>
+
+<!-- 본문 -->
+<div class="container">
+
+    <!-- 카카오톡 -->
+    <div class="service-row">
+        <img src="images/kakao.png" class="service-icon">
+
+        <div class="service-text">
+            <div class="service-text-title">더로그 서버 단톡방입니다.</div>
+            <div class="service-text-desc">
+                다양한 소식을 단체 톡방에서 확인하세요.<br>
+                * 해당 링크 클릭 시 단톡방으로 이동합니다.
+            </div>
+        </div>
+
+        <a href="https://open.kakao.com/o/gyZXde8h" class="service-btn" target="_blank">단톡방 바로가기</a>
+    </div>
+
+    <div class="service-line"></div>
+
+    <!-- 텔레그램 -->
+    <div class="service-row">
+        <img src="images/telegram.png" class="service-icon">
+
+        <div class="service-text">
+            <div class="service-text-title">텔레그램</div>
+            <div class="service-text-desc">
+                문의 사항이 있을 경우 텔레그램으로 연락해주세요.<br>
+                * 해당 링크 클릭 시 고객센터로 이동합니다.
+            </div>
+        </div>
+
+        <a href="https://t.me/thelogsv" class="service-btn" target="_blank">고객센터 바로가기</a>
+    </div>
+
+</div>
+
+<!-- footer -->
+<div class="footer">
+    서버의 모든 저작권은 NC소프트에 있으며, 리니지 개발과 발전, 커뮤니티를 위한 서버입니다.<br>
+    게임사의 요청 시 서버는 언제든지 중단될 수 있음을 알려드립니다.
+</div>
+
+</body>
+</html>
