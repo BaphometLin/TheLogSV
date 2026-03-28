@@ -32,5 +32,6 @@
 ✔️ 아이템 / 아데나 가치 관리
 ━━━━━━━━━━━━━━━━━━
 
-🌐 https://baphometlin.github.io/TheLogSV/
-✉️ Telegram : Baphometlin
+홈페이지 : https://baphometlin.github.io/TheLogSV/
+디스코드 : https://discord.gg/g3AuKy4t
+텔레그램 : Baphometlin
